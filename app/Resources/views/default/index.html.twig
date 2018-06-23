@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <h1 class="display-4">THE TASK</h1>
+    <p>Get the cheapest exchange rates.</p>
+    <hr class="my-4">
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Currency</th>
+            <th scope="col">Value</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for currency in currencies %}
+        <tr>
+            <td>{{ currency.name }}</td>
+            <td>{{ currency.value }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

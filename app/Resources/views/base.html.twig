@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>{% block title %}Back-End Task{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+          integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}?v=2" />
+
+    <style>
+        body {
+            background-color: #E9ECEF;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron text-center">
+            {% block body %}{% endblock %}
+        </div>
+    </div>
+{% block javascripts %}
+{% endblock %}
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
+<script>
+    // clearing up insignificant trailing zeros if there are any.
+    $("tbody tr").each(function() {
+        // Within tr we find the last td child element and get content
+        var value = $(this).find("td:last-child").html();
+        // convert the string to number, then back to string in order to remove zeros
+        var numberVal = parseFloat(value);
+        var stringVal = numberVal.toString();
+        // finally add TL symbol as well.
+        $(this).find("td:last-child").html("&#8378;" + stringVal);
+    });
+</script>
+</body>
+</html>
