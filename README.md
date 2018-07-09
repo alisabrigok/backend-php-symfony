@@ -1,17 +1,13 @@
-Back-End Task
-=======
+# Some Back-End Work
+
+This application fetches some currencies from two different API endpoints, compares them and saves the smallest ones into a **MySQL** database via an implementation of **adapter design pattern**.
+
+All these operations can be executed using `app:currency-comparison` command or more precisely using: `php bin/console app:currency-comparison` command. By accessing to homepage, the values will be retrieved from database and shown in a table. The project made with using **PHP** and **Symfony** framework.
+
+## ScreenShots
 
 ![Working Task](https://media.giphy.com/media/defybnEk2nOhdBYLCi/giphy.gif)
 
 ![Working Task Zoomed In](https://media.giphy.com/media/f9RH5APGTKMIvwo1wb/giphy.gif)
 
-The command can be executed by typing `app:currency-comparison`
-More precisely: `php bin/console app:currency-comparison`
-
-**Note:** I know I'm suppose to insert the data to database if there is no value in the database and update if they exist but I couldn't do it within time so instead I remove all data each time and re-insert.
-
-**Final Words:** This is all I was able to do using a framework and a language that I'm not really comfortable with within 3 days but I hope it might at least say something about my learning skills to some degree.
-
-Thanks for the spent time to evaluate me.
-
-Regards.
+**Note:** This thing is done using a framework and a language that I'm not really comfortable with within 3 days.
