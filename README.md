@@ -1,4 +1,4 @@
-# Some Back-End Work
+# Description
 
 This application fetches some currencies from two different API endpoints, compares them and saves the smallest ones into a **MySQL** database via an implementation of **adapter design pattern**.
 
